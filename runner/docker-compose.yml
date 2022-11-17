@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  drone_runner:
+    image: drone/drone-runner-docker
+    restart: always
+    command: agent
+    volumes:
+     - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+     - 3000:3000
+    env_file:
+     - ./.env
+    container_name: drone_runner

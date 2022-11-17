@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  drone-server:
+  drone_server:
     image: drone/drone
     restart: always
     ports:
